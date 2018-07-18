@@ -1,6 +1,5 @@
 
-
-TOP:=$(abspath $(lastword $(MAKEFILE_LIST)))
+TOP:=$(CURDIR)
 
 include $(TOP)/confs/CONFIG
 include $(TOP)/rules//RULES

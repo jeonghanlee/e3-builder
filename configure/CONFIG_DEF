@@ -1,9 +1,3 @@
-# Keep always the module up-to-date
-define make_e3
-$(MAKE) -C $@/ vars
-#make -C $@/ init
-#make -C $@/ rebuild
-endef
 
 ifndef VERBOSE
   QUIET := @
@@ -12,3 +6,11 @@ endif
 ifdef DEBUG_SHELL
   SHELL = /bin/sh -x
 endif
+
+
+# Keep always the module up-to-date
+define make_e3
+$(QUIET)$(MAKE) -C $@/ vars
+$(QUIET)#make -C $@/ init
+$(QUIET)#make -C $@/ rebuild
+endef

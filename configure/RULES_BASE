@@ -1,7 +1,0 @@
-
-
-.PHONY: base
-
-base:
-	$(QUIET) $(make_e3)
-	

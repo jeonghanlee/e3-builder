@@ -1,3 +1,0 @@
-.PHONY: require
-require:
-	$(QUIET) $(make_e3)

@@ -1,9 +1,10 @@
 
+.PHONY: default $(BUILD_DIRS)
 
-.PHONY: $(BUILD_DIRS)
+default: $(BUILD_DIRS)
 
 $(BUILD_DIRS):
-	$(QUIET) $(make_e3)
+	$(QUIET) $(make_e3) 
 
 
 

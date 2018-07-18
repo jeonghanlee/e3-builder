@@ -1,5 +1,4 @@
 
 include $(TOP)/configure/CONFIG_DEF
 
-BUILD_DIRS:=base
-BUILD_DIRS+=require
+BUILD_DIRS:=base require

@@ -2,4 +2,4 @@
 TOP:=$(CURDIR)
 
 include $(TOP)/configure/CONFIG
-include $(TOP)/configure//RULES
+include $(TOP)/configure/RULES

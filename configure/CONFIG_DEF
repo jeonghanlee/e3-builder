@@ -1,7 +1,8 @@
 # Keep always the module up-to-date
 define make_e3
-make -C $@/ init
-make -C $@/ rebuild
+$(MAKE) -C $@/ vars
+#make -C $@/ init
+#make -C $@/ rebuild
 endef
 
 ifndef VERBOSE

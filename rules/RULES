@@ -1,5 +1,0 @@
-
-
-include $(TOP)/rules/RULES_BASE
-include $(TOP)/rules/RULES_REQUIRE
-

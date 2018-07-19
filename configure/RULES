@@ -1,4 +1,4 @@
-.PHONY: default $(BUILD_DIRS)
+.PHONY: default $(BUILD_BR_DIRS) $(BUILD_DIRS)
 
 default: $(BUILD_BR_DIRS) $(BUILD_DIRS)
 

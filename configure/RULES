@@ -1,9 +1,13 @@
-
 .PHONY: default $(BUILD_DIRS)
 
-default: $(BUILD_DIRS)
+default: $(BUILD_BR_DIRS) $(BUILD_DIRS)
+
+$(BUILD_BR_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3) 
 
 $(BUILD_DIRS):
+	@echo $@
 	$(QUIET) $(make_e3) 
 
 

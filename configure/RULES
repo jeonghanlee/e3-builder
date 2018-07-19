@@ -4,7 +4,7 @@ default: $(BUILD_BR_DIRS) $(BUILD_COMMON_DIRS)
 
 $(BUILD_BR_DIRS): 
 	@echo $@
-#	$(QUIET) $(make_e3) 
+	$(QUIET) $(make_e3) 
 
 .PHONY: $(BUILD_COMMON_DIRS)
 
@@ -12,4 +12,4 @@ common: $(BUILD_COMMON_DIRS)
 
 $(BUILD_COMMON_DIRS):
 	@echo $@
-#	$(QUIET) $(make_e3) 
+	$(QUIET) $(make_e3) 

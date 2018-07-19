@@ -11,6 +11,6 @@ endif
 # Keep always the module up-to-date
 define make_e3
 $(QUIET)$(MAKE) -C $@/ vars
-$(QUIET)#make -C $@/ init
-$(QUIET)#make -C $@/ rebuild
+$(QUIET)$(MAKE) -C $@/ init
+$(QUIET)$(MAKE) -C $@/ rebuild
 endef

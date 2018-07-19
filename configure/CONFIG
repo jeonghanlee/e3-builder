@@ -7,4 +7,4 @@ EXCLUDES_DIRS+=require/
 
 BUILD_BR_DIRS = base require
 
-BUILD_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard */))))
+BUILD_COMMON_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard */common/))))

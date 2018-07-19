@@ -1,12 +1,12 @@
-.PHONY: default $(BUILD_BR_DIRS) $(BUILD_DIRS)
+.PHONY: default $(BUILD_BR_DIRS) $(BUILD_COMMON_DIRS)
 
-default: $(BUILD_BR_DIRS) $(BUILD_DIRS)
+default: $(BUILD_BR_DIRS) $(BUILD_COMMON_DIRS)
 
 $(BUILD_BR_DIRS):
 	@echo $@
 	$(QUIET) $(make_e3) 
 
-$(BUILD_DIRS):
+$(BUILD_COMMON_DIRS):
 	@echo $@
 	$(QUIET) $(make_e3) 
 

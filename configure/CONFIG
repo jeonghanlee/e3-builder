@@ -1,8 +1,9 @@
 
 include $(TOP)/configure/CONFIG_DEF
 
-EXCLUDES_DIRS+=configure/
+EXCLUDES_DIRS+=common/
 
 BUILD_BR_DIRS = base require
 
-BUILD_COMMON_DIRS:=$(sort $(dir $(wildcard common/*/)))
+BUILD_COMMON_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard common/*/))))
+

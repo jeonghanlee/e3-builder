@@ -1,15 +1,14 @@
-.PHONY: default $(BUILD_BR_DIRS) 
+# -*- mode: Makefile;-*-
+.DEFAULT_GOAL := all
 
-default: $(BUILD_BR_DIRS) $(BUILD_COMMON_DIRS)
+.PHONY: $(BUILD_BR_DIRS) $(BUILD_COMMON_DIRS)
+
+all: $(BUILD_BR_DIRS) $(BUILD_COMMON_DIRS)
 
 $(BUILD_BR_DIRS): 
 	@echo $@
 	$(QUIET) $(make_e3) 
 
-.PHONY: $(BUILD_COMMON_DIRS)
-
-common: $(BUILD_COMMON_DIRS)
-
 $(BUILD_COMMON_DIRS):
 	@echo $@
-	$(QUIET) $(make_e3) 
+	$(QUIET) $(make_e3)

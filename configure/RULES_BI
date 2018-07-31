@@ -1,0 +1,9 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: bi $(BUILD_BI_DIRS) 
+
+bi: $(BUILD_BI_DIRS)
+
+$(BUILD_BI_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)

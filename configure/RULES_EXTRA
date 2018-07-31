@@ -1,0 +1,9 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: extra $(BUILD_EXTRA_DIRS) 
+
+extra: $(BUILD_EXTRA_DIRS)
+
+$(BUILD_EXTRA_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)

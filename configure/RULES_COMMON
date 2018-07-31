@@ -1,0 +1,9 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: common $(BUILD_COMMON_DIRS) 
+
+common: $(BUILD_COMMON_DIRS) 
+
+$(BUILD_COMMON_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)

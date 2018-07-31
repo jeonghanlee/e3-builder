@@ -1,0 +1,11 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: areaDetector $(BUILD_AD_DIRS) 
+
+areaDetector: $(BUILD_AD_DIRS)
+
+$(BUILD_AD_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+
+

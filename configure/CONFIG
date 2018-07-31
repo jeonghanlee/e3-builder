@@ -16,7 +16,7 @@ BUILD_BR_DIRS = base require
 
 BUILD_COMMON_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard common/*/))))
 BUILD_TIMING_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard timing/*/))))
-BUILD_V4_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard common/*/))))
+BUILD_V4_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard v4/*/))))
 BUILD_AD_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard areaDetector/*/))))
 BUILD_IOXOS0_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ioxos00/*/))))
 BUILD_IOXOS1_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ioxos01/*/))))

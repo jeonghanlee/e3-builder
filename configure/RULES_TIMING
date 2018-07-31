@@ -1,0 +1,10 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: $(BUILD_TIMING_DIRS) timing
+
+timing: $(BUILD_TIMING_DIRS)
+
+$(BUILD_TIMING_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+

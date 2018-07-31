@@ -3,4 +3,15 @@ e3-*
 *.list
 .#*
 *~
+base/
+common/
+require/
+timing/
+v4/
+areaDetector/
+bi/
+extra/
+ioxos0/
+ioxos1/
+llrf/
 

@@ -1,0 +1,9 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: ethercat $(BUILD_ECAT_DIRS) 
+
+ethercat: $(BUILD_ECAT_DIRS)
+
+$(BUILD_ECAT_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)

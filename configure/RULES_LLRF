@@ -1,0 +1,11 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: llrf $(BUILD_LLRF_DIRS) 
+
+llrf: $(BUILD_LLRF_DIRS)
+
+$(BUILD_LLRF_DIRS): 
+	@echo $@
+	$(QUIET) $(make_e3) 
+
+

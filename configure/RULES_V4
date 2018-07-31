@@ -1,0 +1,9 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: v4 $(BUILD_V4_DIRS) 
+
+v4: $(BUILD_V4_DIRS)
+
+$(BUILD_V4_DIRS):
+	@echo $@
+#	$(QUIET) $(make_e3)

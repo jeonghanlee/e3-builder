@@ -1,0 +1,9 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: ioxos0 $(BUILD_IOXOS0_DIRS) 
+
+ioxos0: $(BUILD_IOXOS0_DIRS)
+
+$(BUILD_IOXOS0_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)

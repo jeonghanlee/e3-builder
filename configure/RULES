@@ -5,6 +5,16 @@
 
 all: $(BUILD_BR_DIRS) $(BUILD_COMMON_DIRS)
 
+br: $(BUILD_BR_DIRS)
+
+common: $(BUILD_COMMON_DIRS) 
+
+timing: $(BUILD_TIMING_DIRS)
+
+v4: $(BUILD_V4_DIRS)
+
+
+
 $(BUILD_BR_DIRS): 
 	@echo $@
 	$(QUIET) $(make_e3) 
@@ -12,3 +22,37 @@ $(BUILD_BR_DIRS):
 $(BUILD_COMMON_DIRS):
 	@echo $@
 	$(QUIET) $(make_e3)
+
+$(BUILD_TIMING_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+
+$(BUILD_V4_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+
+$(BUILD_AD_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+
+$(BUILD_IOXOS0_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+
+$(BUILD_IOXOS1_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+
+$(BUILD_LLRF_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+
+$(BUILD_BI_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+
+$(BUILD_ECAT_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)
+
+

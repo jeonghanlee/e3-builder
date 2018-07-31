@@ -2,8 +2,25 @@
 include $(TOP)/configure/CONFIG_DEF
 
 EXCLUDES_DIRS+=common/
+EXCLUDES_DIRS+=timing/
+EXCLUDES_DIRS+=v4/
+EXCLUDES_DIRS+=areaDetector/
+EXCLUDES_DIRS+=ioxos00/
+EXCLUDES_DIRS+=ioxos01/
+EXCLUDES_DIRS+=llrf/
+EXCLUDES_DIRS+=bi/
+EXCLUDES_DIRS+=ethercat/
+EXCLUDES_DIRS+=extra/
 
 BUILD_BR_DIRS = base require
 
 BUILD_COMMON_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard common/*/))))
-
+BUILD_TIMING_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard timing/*/))))
+BUILD_V4_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard common/*/))))
+BUILD_AD_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard areaDetector/*/))))
+BUILD_IOXOS0_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ioxos00/*/))))
+BUILD_IOXOS1_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ioxos01/*/))))
+BUILD_LLRF_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard llrf/*/))))
+BUILD_BI_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard bi/*/))))
+BUILD_ECAT_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ethercat/*/))))
+BUILD_EXTRA_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard extra/*/))))

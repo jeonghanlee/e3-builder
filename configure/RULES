@@ -9,8 +9,8 @@ $(BUILD_BR_DIRS):
 	$(QUIET) $(make_e3) 
 
 
-#include $(TOP)/configure/RULES_COMMON
-#include $(TOP)/configure/RULES_TIMING
+include $(TOP)/configure/RULES_COMMON
+include $(TOP)/configure/RULES_TIMING
 include $(TOP)/configure/RULES_V4
 #include $(TOP)/configure/RULES_AD
 #include $(TOP)/configure/RULES_IOXOS0

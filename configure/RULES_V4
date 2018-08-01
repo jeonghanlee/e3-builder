@@ -6,4 +6,4 @@ v4: $(BUILD_V4_DIRS)
 
 $(BUILD_V4_DIRS):
 	@echo $@
-#	$(QUIET) $(make_e3)
+	$(QUIET) $(make_e3)

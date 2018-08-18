@@ -1,66 +1,128 @@
 # e3-builder
 ===
 
-
-## Repo
-
-```
-mkdir -p ~/bin
-export PATH=~/bin:$PATH
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-chmod a+x ~/bin/repo
-```
+European Spallation EPICS Environment (E3) [1] Deployment, works with e3-mainfest [2]
 
 
-## Init
 
-* Create the working directory
-```
-mkdir E3_WORKING_DIRECTORY
-cd E3_WORKING_DIRECTORY
-```
+## Preparation
 
-* Initializes E3_WORKING_DIRECTORY to use the default.xml on the master branch
+One needs to setup Repo as follows:
 
 ```
-repo init -u https://github.com/jeonghanlee/manifest.git
+$ mkdir -p ~/bin
+$ export PATH=~/bin:$PATH
+$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+$ chmod a+x ~/bin/repo
 ```
 
 
-* Initializes E3_WORKING_DIRECTORY to use a branch with groups
+## Procedure
+
+### Step 1:  Create a directory
 ```
-repo init -u https://github.com/jeonghanlee/manifest.git -b a_branch -g default,pkg,timing 
+$ mkdir e3_env
+$ cd e3_env
 ```
 
-* Initializes E3_WORKING_DIRECTORY to use the test.xml, on the master branch
+### Step 2: Init
+
+
+* Initialize epics_env to use the default.xml on the master branch
+
 ```
-repo init -u https://github.com/jeonghanlee/manifest.git -m test.xml
+e3_env $ repo init -u https://github.com/icshwi/e3-manifest
+```
+
+### Step 3: Sync
+
+```
+e3_env $ repo sync --no-clone-bundle
 ```
 
 
-## sync
+### Step 4: Build
+
 
 ```
-repo sync
+e3_env $ bash pkg.bash
+e3_env $ make 
+e3_env $ make common
+e3_env $ make timing
+e3_env $ make v4
 ```
 
-## Setup E3
+### Step 5: Set the E3
 ```
-make all
+e3_env $ source builder/require/tools/setE3Env.bash 
 ```
 
-## E3-R0.2.0.0-1807 Release
 
-* Init the E3 manifest
+## E3 Extensions 
+
+
+### Extra
 ```
-repo init -u https://github.com/jeonghanlee/manifest.git -m E3-R0.2.0.0-1807.xml
-repo init -u https://github.com/jeonghanlee/manifest.git -m e3-180801.xml
+e3_env $ make extra
 ```
-* Sync
+
+### AreaDetector
+
 ```
-repo sync --no-clone-bundle
+e3_env $ make areaDetector
 ```
+
+### IOxOS
+```
+```
+
+### Ethercat (Motion)
+```
+```
+
+### LLRF Applications
+```
+```
+
+### BI Applications
+```
+```
+
+
+## Platform Path
+In the directory, one can find the following additional tools which allow users to install few more enviornment or libraries. For further information, please look at corresponding url
+
+### ethercat
+* https://github.com/icshwi/etherlabmaster
+
+### lmfit
+* https://github.com/jeonghanlee/lmfit-env
+
+### opencv
+* https://github.com/jeonghanlee/opencv-env
+
+### nioc
+* https://github.com/jeonghanlee/epics_NIOCs
+
+
+
+## Additional commands
+
+* Initialize epics_env to use the epics_180811.xml, on the master branch
+```
+repo init -u https://github.com/icshwi/e3-manifest -m e3_180801.xml
+```
+
 * Force Sync
 ```
 repo sync --force-sync --no-clone-bundle
 ```
+
+## References and comments
+
+[1] https://github.com/icshwi/e3
+[2] https://github.com/icshwi/e3-manifest
+[3] https://gerrit.googlesource.com/git-repo/          
+[4] default.xml is the symbolic link to e3-180901.xml
+
+

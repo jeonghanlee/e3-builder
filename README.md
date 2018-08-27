@@ -127,10 +127,10 @@ repo sync --force-sync --no-clone-bundle
 
 ## References and comments
 
-[1] https://github.com/icshwi/e3
-[2] https://github.com/icshwi/e3-manifest
-[3] https://gerrit.googlesource.com/git-repo/          
-[4] default.xml is the symbolic link to e3-180901.xml
-[5] https://raw.githubusercontent.com/icshwi/e3/master/tools/use_sshkey.sh
-[6] https://github.com/icshwi/etherlabmaster
+[1]: https://github.com/icshwi/e3              
+[2]: https://github.com/icshwi/e3-manifest             
+[3]: https://gerrit.googlesource.com/git-repo/                   
+[4]: default.xml is the symbolic link to e3-180901.xml               
+[5]: https://raw.githubusercontent.com/icshwi/e3/master/tools/use_sshkey.sh              
+[6]: https://github.com/icshwi/etherlabmaster                 
 

@@ -1,5 +1,4 @@
 # e3-builder
-==
 
 European Spallation EPICS Environment (E3) [[1]] Deployment, works with e3-mainfest [[2]]
 

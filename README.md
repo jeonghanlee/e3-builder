@@ -73,18 +73,25 @@ e3_env $ make areaDetector
 ```
 
 ### IOxOS
+One should access the ESS bitbucket repositories. Please check the reference [5].
 ```
 ```
 
 ### Ethercat (Motion)
+
+Before it, one should do platform/ethercat first. Please follow [platform/ethercat/README.md](.platform/ethercat/README.md). One should access the ESS bitbucket repository. Please check the reference [5].
+
 ```
+e3_env $ make ethercat
 ```
 
 ### LLRF Applications
+One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [5].
 ```
 ```
 
 ### BI Applications
+One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [5].
 ```
 ```
 
@@ -124,5 +131,6 @@ repo sync --force-sync --no-clone-bundle
 [2] https://github.com/icshwi/e3-manifest
 [3] https://gerrit.googlesource.com/git-repo/          
 [4] default.xml is the symbolic link to e3-180901.xml
+[5] https://raw.githubusercontent.com/icshwi/e3/master/tools/use_sshkey.sh
 
 

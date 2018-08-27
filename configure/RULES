@@ -17,7 +17,7 @@ include $(TOP)/configure/RULES_AD
 #include $(TOP)/configure/RULES_IOXOS1
 #include $(TOP)/configure/RULES_LLRF
 #include $(TOP)/configure/RULES_BI
-#include $(TOP)/configure/RULES_ECAT
+include $(TOP)/configure/RULES_ECAT
 include $(TOP)/configure/RULES_EXTRA
 
 

@@ -79,7 +79,7 @@ One should access the ESS bitbucket repositories. Please check the reference [5]
 
 ### Ethercat (Motion)
 
-Before it, one should do platform/ethercat first. Please follow [platform/ethercat/README.md](.platform/ethercat/README.md). One should access the ESS bitbucket repository. Please check the reference [5].
+Before it, one should do platform/ethercat first. Please follow the README.md in the reference [6]. One should access the ESS bitbucket repository. Please check the reference [5].
 
 ```
 e3_env $ make ethercat
@@ -132,5 +132,5 @@ repo sync --force-sync --no-clone-bundle
 [3] https://gerrit.googlesource.com/git-repo/          
 [4] default.xml is the symbolic link to e3-180901.xml
 [5] https://raw.githubusercontent.com/icshwi/e3/master/tools/use_sshkey.sh
-
+[6] https://github.com/icshwi/etherlabmaster
 

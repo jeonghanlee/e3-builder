@@ -27,7 +27,6 @@ $ cd e3_env
 
 ### Step 2: Init
 
-
 * Initialize epics_env to use the default.xml on the master branch
 
 ```
@@ -42,8 +41,6 @@ e3_env $ repo sync --no-clone-bundle
 
 
 ### Step 4: Build
-
-
 ```
 e3_env $ bash pkg.bash
 e3_env $ make 
@@ -67,14 +64,18 @@ e3_env $ make extra
 ```
 
 ### AreaDetector
-
 ```
 e3_env $ make areaDetector
 ```
 
 ### IOxOS
-One should access the ESS bitbucket repositories. Please check the reference [5].
 ```
+e3_env $ make ioxos0
+```
+
+In order to execute the following commands, it is the mandatory that users can access the ESS bitbucket, gitlab, or both repositories within the ESS network. Most of users do NOT need them. 
+```
+e3_env $ make ioxos1
 ```
 
 ### Ethercat (Motion)

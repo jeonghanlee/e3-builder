@@ -1,7 +1,6 @@
 # e3-builder
-===
 
-European Spallation EPICS Environment (E3) [1] Deployment, works with e3-mainfest [2]
+European Spallation EPICS Environment (E3) [[1]] Deployment, works with e3-mainfest [[2]]
 
 
 
@@ -27,7 +26,8 @@ $ cd e3_env
 
 ### Step 2: Init
 
-* Initialize epics_env to use the default.xml on the master branch
+
+* Initialize epics_env to use the default.xml [[4]] on the master branch
 
 ```
 e3_env $ repo init -u https://github.com/icshwi/e3-manifest
@@ -69,6 +69,7 @@ e3_env $ make areaDetector
 ```
 
 ### IOxOS
+
 ```
 e3_env $ make ioxos0
 ```
@@ -80,19 +81,19 @@ e3_env $ make ioxos1
 
 ### Ethercat (Motion)
 
-Before it, one should do platform/ethercat first. Please follow the README.md in the reference [6]. One should access the ESS bitbucket repository. Please check the reference [5].
+Before it, one should do platform/ethercat first. Please follow the README.md in the reference [[6]]. One should access the ESS bitbucket repository. Please check the reference [[5]].
 
 ```
 e3_env $ make ethercat
 ```
 
 ### LLRF Applications
-One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [5].
+One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [[5]].
 ```
 ```
 
 ### BI Applications
-One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [5].
+One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [[5]].
 ```
 ```
 
@@ -128,10 +129,20 @@ repo sync --force-sync --no-clone-bundle
 
 ## References and comments
 
-[1]: https://github.com/icshwi/e3              
-[2]: https://github.com/icshwi/e3-manifest             
-[3]: https://gerrit.googlesource.com/git-repo/                   
-[4]: default.xml is the symbolic link to e3-180901.xml               
-[5]: https://raw.githubusercontent.com/icshwi/e3/master/tools/use_sshkey.sh              
-[6]: https://github.com/icshwi/etherlabmaster                 
+
+(1) https://github.com/icshwi/e3                  
+(2) https://github.com/icshwi/e3-manifest                     
+(3) https://gerrit.googlesource.com/git-repo/                      
+(4) https://raw.githubusercontent.com/icshwi/e3-manifest/master/default.xml                      
+(5) https://raw.githubusercontent.com/icshwi/e3/master/tools/use_sshkey.sh                      
+(6) https://github.com/icshwi/etherlabmaster                            
+
+
+
+[1]: https://github.com/icshwi/e3                  
+[2]: https://github.com/icshwi/e3-manifest                     
+[3]: https://gerrit.googlesource.com/git-repo/                      
+[4]: https://raw.githubusercontent.com/icshwi/e3-manifest/master/default.xml                      
+[5]: https://raw.githubusercontent.com/icshwi/e3/master/tools/use_sshkey.sh                      
+[6]: https://github.com/icshwi/etherlabmaster                            
 

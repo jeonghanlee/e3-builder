@@ -5,8 +5,8 @@ BUILD_MAKE:=make -C builder
 base:
 	$(BUILD_MAKE) base
 
-req:
-	$(BUILD_MAKE) req
+require:
+	$(BUILD_MAKE) require
 
 
 common:

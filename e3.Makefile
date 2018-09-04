@@ -1,9 +1,13 @@
-.DEFAULT_GOAL := br
+.DEFAULT_GOAL := base
 
 BUILD_MAKE:=make -C builder
 
-br:
-	$(BUILD_MAKE) br
+base:
+	$(BUILD_MAKE) base
+
+req:
+	$(BUILD_MAKE) req
+
 
 common:
 	$(BUILD_MAKE) common

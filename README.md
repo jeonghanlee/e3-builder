@@ -43,7 +43,8 @@ e3_env $ repo sync --no-clone-bundle
 ### Step 4: Build
 ```
 e3_env $ bash pkg.bash
-e3_env $ make 
+e3_env $ make base
+e3_env $ make require
 e3_env $ make common
 e3_env $ make timing
 e3_env $ make v4
@@ -119,7 +120,7 @@ In the directory, one can find the following additional tools which allow users 
 
 * Initialize epics_env to use the epics_180811.xml, on the master branch
 ```
-repo init -u https://github.com/icshwi/e3-manifest -m e3_180801.xml
+repo init -u https://github.com/icshwi/e3-manifest -m e3-180801.xml
 ```
 
 * Force Sync

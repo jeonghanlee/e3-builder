@@ -1,6 +1,7 @@
 
 include $(TOP)/configure/CONFIG_DEF
 
+EXCLUDES_DIRS+=require/
 EXCLUDES_DIRS+=common/
 EXCLUDES_DIRS+=timing/
 EXCLUDES_DIRS+=v4/
@@ -12,8 +13,9 @@ EXCLUDES_DIRS+=extra/
 EXCLUDES_DIRS+=llrf/
 EXCLUDES_DIRS+=bi/
 
-BUILD_BR_DIRS = base require
-
+# One BASE
+BUILD_BASE_DIR = base
+BUIDL_REQUIRE_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard require/*/))))
 BUILD_COMMON_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard common/*/))))
 BUILD_TIMING_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard timing/*/))))
 BUILD_V4_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard v4/*/))))

@@ -1,14 +1,14 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: br $(BUILD_BR_DIRS) 
+.PHONY: base $(BUILD_BASE_DIR) 
 
-br: $(BUILD_BR_DIRS)
+base: $(BUILD_BASE_DIR)
 
-$(BUILD_BR_DIRS): 
+$(BUILD_BASE_DIR): 
 	@echo $@
 	$(QUIET) $(make_e3) 
 
-
+include $(TOP)/configure/RULES_REQUIRE
 include $(TOP)/configure/RULES_COMMON
 include $(TOP)/configure/RULES_TIMING
 include $(TOP)/configure/RULES_V4

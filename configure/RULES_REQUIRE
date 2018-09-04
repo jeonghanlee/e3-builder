@@ -1,0 +1,9 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: require $(BUILD_REQUIRE_DIRS) 
+
+require: $(BUILD_REQUIRE_DIRS) 
+
+$(BUILD_REQUIRE_DIRS):
+	@echo $@
+	$(QUIET) $(make_e3)

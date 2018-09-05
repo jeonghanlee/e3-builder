@@ -52,12 +52,13 @@ e3_env $ make v4
 
 ### Step 5: Set the E3
 ```
-e3_env $ source builder/require/tools/setE3Env.bash 
+e3_env $ source 000.setE3Env.bash 
 ```
 
 
 ## E3 Extensions 
 
+Before installing the following module group, one should install all necessary things (base, require, common, v4, kernel modules, and so on). 
 
 ### Extra
 ```
@@ -89,18 +90,21 @@ e3_env $ make ethercat
 ```
 
 ### LLRF Applications
-One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [[5]].
+
+Before it, one should install the LLRF SIS8300 kernel driver. One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [[5]].
 ```
+e3_env $ make llrf
 ```
 
 ### BI Applications
-One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [[5]].
+Before it, one should install the BI SIS8300 kernel driver. One should access the ESS bitbucket, gitlab, or both repositories. Please check the reference [[5]].
 ```
+e3_env $ make bi
 ```
 
 
 ## Platform Path
-In the directory, one can find the following additional tools which allow users to install few more enviornment or libraries. For further information, please look at corresponding url
+In the directory, one can find the following additional tools which allow users to install few more enviornment or libraries. For further information, please look at corresponding urls:
 
 ### ethercat
 * https://github.com/icshwi/etherlabmaster

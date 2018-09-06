@@ -1,9 +1,11 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: v4 $(BUILD_V4_DIRS) 
+.PHONY: v4 v4info $(BUILD_V4_DIRS) 
 
 v4: $(BUILD_V4_DIRS)
 
-$(BUILD_V4_DIRS):
-	@echo $@
+$(BUILD_V4_DIRS): v4info
 	$(QUIET) $(make_e3)
+
+v4info:
+	$(QUIET) $(foreach mod, $(BUILD_V4_DIRS), $(call project_info, $(mod));)

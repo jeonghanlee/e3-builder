@@ -4,6 +4,7 @@ e3-*
 .#*
 *~
 base/
+epics-base/
 common/
 require/
 timing/
@@ -15,3 +16,4 @@ ioxos0/
 ioxos1/
 llrf/
 ethercat/
+log

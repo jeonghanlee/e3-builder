@@ -1,11 +1,11 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: areaDetector $(BUILD_AD_DIRS) 
+.PHONY: areaDetector areaDetectorinfo $(BUILD_AD_DIRS) 
 
 areaDetector: $(BUILD_AD_DIRS)
 
-$(BUILD_AD_DIRS):
-	@echo $@
+$(BUILD_AD_DIRS): areaDetectorinfo
 	$(QUIET) $(make_e3)
 
-
+areaDetectorinfo:
+	$(QUIET)$(foreach mod, $(BUILD_AD_DIRS), $(call project_info, $(mod));)

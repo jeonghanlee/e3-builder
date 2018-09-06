@@ -1,9 +1,11 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: ioxos0 $(BUILD_IOXOS0_DIRS) 
+.PHONY: ioxos0 ioxos0info $(BUILD_IOXOS0_DIRS) 
 
 ioxos0: $(BUILD_IOXOS0_DIRS)
 
-$(BUILD_IOXOS0_DIRS):
-	@echo $@
+$(BUILD_IOXOS0_DIRS): ioxos0info
 	$(QUIET) $(make_e3)
+
+ioxos0info:
+	$(QUIET) $(foreach mod, $(BUILD_IOXOS0_DIRS), $(call project_info, $(mod));)

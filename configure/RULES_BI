@@ -1,9 +1,13 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: bi $(BUILD_BI_DIRS) 
+.PHONY: bi biinfo $(BUILD_BI_DIRS) 
 
 bi: $(BUILD_BI_DIRS)
 
-$(BUILD_BI_DIRS):
-	@echo $@
+$(BUILD_BI_DIRS): biinfo
 	$(QUIET) $(make_e3)
+
+biinfo:
+	$(QUIET)$(foreach mod, $(BUILD_BI_DIRS), $(call project_info, $(mod));)
+
+

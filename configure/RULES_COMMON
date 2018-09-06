@@ -1,9 +1,11 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: common $(BUILD_COMMON_DIRS) 
+.PHONY: common commoninfo $(BUILD_COMMON_DIRS)
 
-common: $(BUILD_COMMON_DIRS) 
+common: $(BUILD_COMMON_DIRS)
 
-$(BUILD_COMMON_DIRS):
-	@echo $@
+$(BUILD_COMMON_DIRS): commoninfo
 	$(QUIET) $(make_e3)
+
+commoninfo:
+	$(QUIET) $(foreach mod, $(BUILD_COMMON_DIRS), $(call project_info, $(mod));)

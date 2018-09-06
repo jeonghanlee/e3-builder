@@ -1,3 +1,4 @@
+# -*- mode: Makefile;-*-
 
 ifndef VERBOSE
   QUIET := @
@@ -7,11 +8,15 @@ ifdef DEBUG_SHELL
   SHELL = /bin/sh -x
 endif
 
+define project_info
+repo info -bl $(1)/
+$(QUIET)$(MAKE) -s -s -C $(1)/ vars
+endef
 
 # Keep always the module up-to-date
 define make_e3
-$(QUIET)$(MAKE) -C $@/ vars
 $(QUIET)$(MAKE) -C $@/ init
 $(QUIET)$(MAKE) -C $@/ patch
 $(QUIET)$(MAKE) -C $@/ rebuild
 endef
+

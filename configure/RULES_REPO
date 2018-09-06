@@ -1,0 +1,6 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: info
+
+info:
+	$(QUIET)repo info -l > $(TOP)/e3-repo-$$(date +%Y%m%d%H%M).log

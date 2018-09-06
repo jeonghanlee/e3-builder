@@ -1,11 +1,11 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: llrf $(BUILD_LLRF_DIRS) 
+.PHONY: llrf llrfinfo $(BUILD_LLRF_DIRS) 
 
 llrf: $(BUILD_LLRF_DIRS)
 
-$(BUILD_LLRF_DIRS): 
-	@echo $@
+$(BUILD_LLRF_DIRS): llrfinfo
 	$(QUIET) $(make_e3) 
 
-
+llrfinfo:
+	$(QUIET) $(foreach mod, $(BUILD_LLRF_DIRS), $(call project_info, $(mod));)

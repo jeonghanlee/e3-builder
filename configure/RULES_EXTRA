@@ -1,9 +1,11 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: extra $(BUILD_EXTRA_DIRS) 
+.PHONY: extra extrainfo $(BUILD_EXTRA_DIRS) 
 
 extra: $(BUILD_EXTRA_DIRS)
 
-$(BUILD_EXTRA_DIRS):
-	@echo $@
+$(BUILD_EXTRA_DIRS): extrainfo
 	$(QUIET) $(make_e3)
+
+extrainfo:
+	$(QUIET)$(foreach mod, $(BUILD_EXTRA_DIRS), $(call project_info, $(mod));)

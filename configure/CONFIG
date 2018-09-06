@@ -14,14 +14,14 @@ EXCLUDES_DIRS+=llrf/
 EXCLUDES_DIRS+=bi/
 
 # One BASE
-BUILD_BASE_DIR = base
+BUILD_BASE_DIR = epics-base
 BUILD_REQUIRE_DIRS =$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard require/*/))))
 BUILD_COMMON_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard common/*/))))
 BUILD_TIMING_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard timing/*/))))
 BUILD_V4_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard v4/*/))))
 BUILD_AD_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard areaDetector/*/))))
-BUILD_IOXOS0_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ioxos00/*/))))
-BUILD_IOXOS1_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ioxos01/*/))))
+BUILD_IOXOS0_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ioxos0/*/))))
+BUILD_IOXOS1_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ioxos1/*/))))
 BUILD_LLRF_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard llrf/*/))))
 BUILD_BI_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard bi/*/))))
 BUILD_ECAT_DIRS:=$(sort $(filter-out $(EXCLUDES_DIRS) EXCLUDES_DIRS, $(dir $(wildcard ethercat/*/))))

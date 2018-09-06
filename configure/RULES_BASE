@@ -1,0 +1,11 @@
+# -*- mode: Makefile;-*-
+
+.PHONY: base baseinfo $(BUILD_BASE_DIR) 
+
+base: $(BUILD_BASE_DIR)
+
+$(BUILD_BASE_DIR):  baseinfo
+	$(QUIET) $(make_e3) 
+
+baseinfo:
+	$(QUIET) $(foreach mod, $(BUILD_BASE_DIR), $(call project_info, $(mod));)

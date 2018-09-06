@@ -1,10 +1,11 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: $(BUILD_TIMING_DIRS) timing
+.PHONY: timing timinginfo $(BUILD_TIMING_DIRS) 
 
 timing: $(BUILD_TIMING_DIRS)
 
-$(BUILD_TIMING_DIRS):
-	@echo $@
+$(BUILD_TIMING_DIRS): timinginfo
 	$(QUIET) $(make_e3)
 
+timinginfo:
+	$(QUIET)$(foreach mod, $(BUILD_TIMING_DIRS), $(call project_info, $(mod));)

@@ -1,43 +1,33 @@
-.DEFAULT_GOAL := base
+.DEFAULT_GOAL := help
 
 BUILD_MAKE:=make -C builder
 
-base:
-	$(BUILD_MAKE) base
 
-require:
-	$(BUILD_MAKE) require
+PROJECT = ethercat extra bi llrf ioxos1 ioxos0 areaDetector v4 timing common require base
+PROJECTINFO = $(addsuffix info, $(PROJECT))
+
+help:
+	$(info ------------------------------------------------------------- )
+	$(info ***   The following PROJECT_GROUPs exist in E3 Builder   ***  )
+	$(info ------------------------------------------------------------- )
+	@echo ""
+	@echo $(PROJECT)
+	@echo ""
+	@echo "* To check the project information, make PROJECT_GROUPinfo"
+	@echo "   For example, make commoninfo"
+	@echo ""
+	@echo "* To install the project, make PROJECT_GROUP"
+	@echo "   For example, make common"
+	@echo ""
+	@echo "* Please consult README for futher instructions"
 
 
-common:
-	$(BUILD_MAKE) common
 
-timing:
-	$(BUILD_MAKE) timing
+$(PROJECT): 
+	$(BUILD_MAKE) $@
 
-v4:
-	$(BUILD_MAKE) v4
+$(PROJECTINFO):
+	$(BUILD_MAKE) $@
 
-areaDetector:
-	$(BUILD_MAKE) areaDetector
 
-ioxos0:
-	$(BUILD_MAKE) ioxos0
-
-ioxos1:
-	$(BUILD_MAKE) ioxos1
-
-llrf:
-	$(BUILD_MAKE) llrf
-
-bi:
-	$(BUILD_MAKE) bi
-
-ethercat:
-	$(BUILD_MAKE) ethercat
-
-extra:
-	$(BUILD_MAKE) extra
-
-.PHONY: default br common timing v4 areaDetector ioxos0 ioxos1 llrf bi ethercat extra
-
+.PHONY: $(PROJECT) $(PROJECTINFO) help

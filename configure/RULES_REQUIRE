@@ -1,9 +1,12 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: require $(BUILD_REQUIRE_DIRS) 
+.PHONY: require requireinfo $(BUILD_REQUIRE_DIRS) 
 
 require: $(BUILD_REQUIRE_DIRS) 
 
-$(BUILD_REQUIRE_DIRS):
-	@echo $@
+$(BUILD_REQUIRE_DIRS): requireinfo
 	$(QUIET) $(make_e3)
+
+requireinfo:
+	$(QUIET) $(foreach mod, $(BUILD_REQUIRE_DIRS), $(call project_info, $(mod));)
+

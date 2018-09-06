@@ -1,9 +1,14 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: ethercat $(BUILD_ECAT_DIRS) 
+.PHONY: ethercat ethercatinfo $(BUILD_ECAT_DIRS)
 
 ethercat: $(BUILD_ECAT_DIRS)
 
-$(BUILD_ECAT_DIRS):
-	@echo $@
+$(BUILD_ECAT_DIRS): ethercatinfo
 	$(QUIET) $(make_e3)
+
+ethercatinfo:
+	$(QUIET)$(foreach mod, $(BUILD_ECAT_DIRS), $(call project_info, $(mod));)
+
+
+

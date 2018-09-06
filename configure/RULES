@@ -1,13 +1,6 @@
 # -*- mode: Makefile;-*-
 
-.PHONY: base $(BUILD_BASE_DIR) 
-
-base: $(BUILD_BASE_DIR)
-
-$(BUILD_BASE_DIR): 
-	@echo $@
-	$(QUIET) $(make_e3) 
-
+include $(TOP)/configure/RULES_BASE
 include $(TOP)/configure/RULES_REQUIRE
 include $(TOP)/configure/RULES_COMMON
 include $(TOP)/configure/RULES_TIMING
@@ -19,7 +12,8 @@ include $(TOP)/configure/RULES_LLRF
 include $(TOP)/configure/RULES_BI
 include $(TOP)/configure/RULES_ECAT
 include $(TOP)/configure/RULES_EXTRA
-
+#
+include $(TOP)/configure/RULES_REPO
 
 
 

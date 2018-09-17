@@ -17,7 +17,6 @@ endef
 define make_e3
 $(QUIET)$(MAKE) -C $@/ init
 $(QUIET)$(MAKE) -C $@/ patch
-$(QUIET)$(MAKE) -C $@/ build
-$(QUIET)$(MAKE) -C $@/ install
+$(QUIET)$(MAKE) -C $@/ rebuild
 endef
 
